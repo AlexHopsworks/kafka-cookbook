@@ -26,6 +26,10 @@ attribute "java/jdk_version",
           :description =>  "Jdk version",
           :type => 'string'
 
+attribute "kkafka/authorizer_version",
+          :description => "Hops Kafka Authorizer version",
+          :type => 'string'
+
 attribute "java/install_flavor",
           :description =>  "Oracle (default) or openjdk",
           :type => 'string'
@@ -154,7 +158,7 @@ attribute "kkafka/broker/leader/imbalance/per/broker/percentageattribute ",
           :description => "",
           :type => 'string'
 
-attribute "kkafka/broker/log/dirs",
+attribute "kkafka/broker/log/dir",
           :description => "",
           :type => 'string'
 
