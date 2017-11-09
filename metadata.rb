@@ -3,7 +3,7 @@ maintainer       "Jim Dowling"
 maintainer_email "jdowling@kth.se"
 license          "Apache v2.0"
 description      'Installs/Configures/Runs kkafka. Karamelized version of https://github.com/mthssdrbrg/kafka-cookbook'
-version          "0.2.1"
+version          "0.3.0"
 
 recipe            "kkafka::install", "Installs kafka binaries"
 recipe            "kkafka::default", "Configures Kafka"
@@ -56,6 +56,10 @@ attribute "kkafka/offset_monitor/port",
 
 attribute "kkafka/memory_mb",
           :description => "Kafka server memory in mbs",
+          :type => 'string'
+
+attribute "kkafka/broker/advertised/listeners",
+          :description => "Listeners to publish to ZooKeeper for clients to use, if different than the `listeners` config property. For example, INTERNAL://hops1:9091,EXTERNAL://hops1:9092",
           :type => 'string'
 
 attribute "kkafka/broker/zookeeper_connection_timeout_ms",
